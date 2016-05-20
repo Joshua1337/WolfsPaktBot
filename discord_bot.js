@@ -95,8 +95,6 @@ var aliases;
 var messagebox;
 
 //commands 
-let commands = { gif, gifAlias: giphy }
-
 var commands = {
 	"gif": {
 		usage: "<image tags>",
@@ -630,6 +628,9 @@ var commands = {
 	}
     }
 };
+
+let commands = { gif, gifAlias: giphy }
+
 try{
 var rssFeeds = require("./rss.json");
 function loadFeeds(){
