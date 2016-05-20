@@ -101,12 +101,7 @@ var meme = {
 	"doge": 8072285,
 	"drevil": 40945639,
 	"skeptical": 101711,
-	"notime": 442575,
-	"yodawg": 101716,
-	"yno": 61527,
-	"crumpy": 405658,
-	"ainttime" 442575,
-	"jackie" 412211
+	"yodawg": 101716
 };
 
 var aliases;
@@ -541,8 +536,8 @@ var commands = {
 			function(err,res,body){
 				var stream = JSON.parse(body);
 				if(stream.stream){
-					bot.sendMessage(msg.channel,
-						+"Der Stream ist online und wir spielen:  "
+					bot.sendMessage(msg.channel, suffix
+						+"Der Stream ist online, wir spielen "
 						+stream.stream.game
 						+"\n"+stream.stream.channel.status
 						+"\n"+stream.stream.preview.large)
