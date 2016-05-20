@@ -1,13 +1,13 @@
 {
-  "name": "DiscordBot",
-  "version": "0.1.1",
+  "name": "WolfsPaktBot",
+  "version": "1.0.0",
   "description": "Bot for Discord app",
   "readme": "README.md",
   "maintainers": [],
   "author": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chalda/DiscordBot.git"
+    "url": "git+https://github.com/Joshua1337/WolfsPaktBot.git"
   },
   "license": "GNU",
   "dependencies": {
