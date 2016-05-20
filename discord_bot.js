@@ -497,7 +497,7 @@ var commands = {
 		  if(stream.stream){
 		const { game, channel, preview } = stream.stream
 				bot.sendMessage(msg.channel, suffix
-					+ `Der Stream ist online, wir spielen *${game}*`
+					+ `Der Stream ist online, wir spielen **${game}**`
 		                        + `\n${channel.status}`
 		                        + `\n${preview.large}`
 		                )
