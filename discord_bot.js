@@ -629,8 +629,6 @@ var commands = {
     }
 };
 
-let commands = { gif, gifAlias: giphy }
-
 try{
 var rssFeeds = require("./rss.json");
 function loadFeeds(){
