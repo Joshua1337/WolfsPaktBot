@@ -523,7 +523,7 @@ var commands = {
 		}
 	},
 	
-	"viewers": {
+	"viewers", "viewer": {
 		description: "Wie viele leute gucken zu?",
 		process: function(bot,msg,suffix){
 		require("request")("https://api.twitch.tv/kraken/streams/wolfspaktcrew",
@@ -532,8 +532,8 @@ var commands = {
 		  if(stream.stream){
 		const { viewers } = stream.stream
 				bot.sendMessage(msg.channel, suffix
-					+ `**Der Stream ist online und *${viewers}*`
-		                        + `leute gucken zu!**`
+					+ `**Der Stream ist online und ${viewers}`
+		                        + ` leute gucken zu!**`
 		                )
 			}else{
 				bot.sendMessage(msg.channel,"Der Stream ist offline")
