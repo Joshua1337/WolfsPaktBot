@@ -508,7 +508,9 @@ var commands = {
 		}
 	},
 	
-	"viewers": {
+	case 'viewer':
+        case 'viewers' 
+            {
 		description: "Wie viele leute gucken zu?",
 		process: function(bot,msg,suffix){
 		require("request")("https://api.twitch.tv/kraken/streams/wolfspaktcrew",
