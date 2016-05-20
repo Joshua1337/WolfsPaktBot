@@ -511,8 +511,7 @@ var commands = {
 		}
 	},
 	
-	case 'viewer':
-        case 'viewers' 
+	"viewers":
             {
 		description: "Wie viele leute gucken zu?",
 		process: function(bot,msg,suffix){
