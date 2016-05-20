@@ -530,10 +530,10 @@ var commands = {
 		function(err,res,body){
 		  var stream = JSON.parse(body)
 		  if(stream.stream){
-		const { game, channel, preview } = stream.stream
+		const { viewers } = stream.stream
 				bot.sendMessage(msg.channel, suffix
 					+ `**Der Stream ist online und *${viewers}*`
-		                        + `leute gucken zu**`
+		                        + `leute gucken zu!**`
 		                )
 			}else{
 				bot.sendMessage(msg.channel,"Der Stream ist offline")
