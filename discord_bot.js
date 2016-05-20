@@ -20,13 +20,6 @@ try {
 	console.log("couldn't load youtube plugin!\n"+e.stack);
 }
 
-try {
-	var wa = require("./wolfram_plugin");
-	var wolfram_plugin = new wa();
-} catch(e){
-	console.log("couldn't load wolfram plugin!\n"+e.stack);
-}
-
 // Get authentication data
 try {
 	var AuthDetails = require("./auth.json");
@@ -362,16 +355,7 @@ var commands = {
             });
         }
     },
-	"wolfram": {
-		usage: "<search terms>",
-        description: "gives results from wolframalpha using search terms",
-        process: function(bot,msg,suffix){
-				if(!suffix){
-					bot.sendMessage(msg.channel,"Usage: !wolfram <search terms> (Ex. !wolfram integrate 4x)");
-				}
-	            wolfram_plugin.respond(suffix,msg.channel,bot);
-       	    }
-	},
+    
     "rss": {
         description: "lists available rss feeds",
         process: function(bot,msg,suffix) {
@@ -386,6 +370,7 @@ var commands = {
             });
         }
     },
+    
     "reddit": {
         usage: "[subreddit]",
         description: "Returns the top post on reddit. Can optionally pass a subreddit to get the top psot there instead",
