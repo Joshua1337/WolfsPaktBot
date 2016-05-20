@@ -13,7 +13,6 @@ try {
 	console.log("couldn't load urban plugin!\n"+e.stack);
 }
 
-try {
 	var leet = require("leet");
 } catch (e){
 	console.log("couldn't load leet plugin!\n"+e.stack);
@@ -514,13 +513,14 @@ var commands = {
 		process: function(bot,msg,suffix){
 			require("request")("https://api.twitch.tv/kraken/streams/wolfspaktcrew",
 			function(err,res,body){
-				var stream = JSON.parse(body);
+				var stream = JSON.parse(body)
 				if(stream.stream){
+         const { game, channel, preview } = stream.stream
 					bot.sendMessage(msg.channel, suffix
-						+"Der Stream ist online, wir spielen "
-						+stream.stream.game
-						+"\n"+stream.stream.channel.status
-						+"\n"+stream.stream.preview.large)
+						+ `Der Stream ist online, wir spielen *${game}*`
+                                                + `\n${channel.status}`
+                                                + `\n${preview.large}`
+                                        )
 				}else{
 					bot.sendMessage(msg.channel,"Der Stream ist offline")
 				}
