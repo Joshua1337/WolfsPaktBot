@@ -13,11 +13,6 @@ try {
 	console.log("couldn't load urban plugin!\n"+e.stack);
 }
 
-	var leet = require("leet");
-} catch (e){
-	console.log("couldn't load leet plugin!\n"+e.stack);
-}
-
 try {
 	var yt = require("./youtube_plugin");
 	var youtube_plugin = new yt();
@@ -529,7 +524,7 @@ var commands = {
 	},
 	
 	"viewers": {
-		description: "Ist der Stream online?",
+		description: "Wie viele leute gucken zu?",
 		process: function(bot,msg,suffix){
 		require("request")("https://api.twitch.tv/kraken/streams/wolfspaktcrew",
 		function(err,res,body){
@@ -564,13 +559,6 @@ var commands = {
 							}
 					});
 			}
-	},
-	"leet": {
-		usage: "<message>",
-		description: "converts boring regular text to 1337",
-		process: function(bot,msg,suffix){
-				bot.sendMessage(msg.channel,leet.convert(suffix));
-		}
 	},
 	
 	//Socialcommands
