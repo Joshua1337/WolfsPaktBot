@@ -94,6 +94,9 @@ var meme = {
 var aliases;
 var messagebox;
 
+//commands 
+let commands = { gif, gifAlias: giphy }
+
 var commands = {
 	"gif": {
 		usage: "<image tags>",
