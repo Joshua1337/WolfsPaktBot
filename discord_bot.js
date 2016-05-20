@@ -92,17 +92,21 @@ var giphy_config = {
 //https://api.imgflip.com/popular_meme_ids
 var meme = {
 	"brace": 61546,
-	"mostinteresting": 61532,
+	"most": 61532,
 	"fry": 61520,
-	"onedoesnot": 61579,
+	"not": 61579,
 	"yuno": 61527,
 	"success": 61544,
-	"allthethings": 61533,
+	"things": 61533,
 	"doge": 8072285,
 	"drevil": 40945639,
 	"skeptical": 101711,
 	"notime": 442575,
-	"yodawg": 101716
+	"yodawg": 101716,
+	"yno": 61527,
+	"crumpy": 405658,
+	"ainttime" 442575,
+	"jackie" 412211
 };
 
 var aliases;
