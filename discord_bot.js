@@ -511,18 +511,37 @@ var commands = {
 	"online": {
 		description: "Ist der Stream online?",
 		process: function(bot,msg,suffix){
-			require("request")("https://api.twitch.tv/kraken/streams/wolfspaktcrew",
-			function(err,res,body){
-				var stream = JSON.parse(body)
-				if(stream.stream){
-         const { game, channel, preview } = stream.stream
-					bot.sendMessage(msg.channel, suffix
-						+ `Der Stream ist online, wir spielen *${game}*`
-                                                + `\n${channel.status}`
-                                                + `\n${preview.large}`
-                                        )
-				}else{
-					bot.sendMessage(msg.channel,"Der Stream ist offline")
+		require("request")("https://api.twitch.tv/kraken/streams/wolfspaktcrew",
+		function(err,res,body){
+		  var stream = JSON.parse(body)
+		  if(stream.stream){
+		const { game, channel, preview } = stream.stream
+				bot.sendMessage(msg.channel, suffix
+					+ `Der Stream ist online, wir spielen *${game}*`
+		                        + `\n${channel.status}`
+		                        + `\n${preview.large}`
+		                )
+			}else{
+				bot.sendMessage(msg.channel,"Der Stream ist offline")
+				}
+			});
+		}
+	},
+	
+	"viewers": {
+		description: "Ist der Stream online?",
+		process: function(bot,msg,suffix){
+		require("request")("https://api.twitch.tv/kraken/streams/wolfspaktcrew",
+		function(err,res,body){
+		  var stream = JSON.parse(body)
+		  if(stream.stream){
+		const { game, channel, preview } = stream.stream
+				bot.sendMessage(msg.channel, suffix
+					+ `**Der Stream ist online und *${viewers}*`
+		                        + `leute gucken zu**`
+		                )
+			}else{
+				bot.sendMessage(msg.channel,"Der Stream ist offline")
 				}
 			});
 		}
